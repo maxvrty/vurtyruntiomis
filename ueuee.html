@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/Page.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+
+
+
+</head>
+
+<body class="flex-column">
+    <div class="page portfolioSection">
+        <div class="content_box">
+            <div class="rectangle"></div>
+            <h3 class="userSubtitle">Abdulbek</h3>
+            <h5 class="greeting">Hello,</h5>
+            <img class="userImage" src="assets/5e1c68b0588ba6c1c6c1ed14502d97ae.svg" alt="alt text" />
+            <div class="rectangle1"></div>
+            <div class="rectangle2"></div>
+            <h1 class="balanceTitle_box">
+                <span class="balanceTitle"><span id="userBalance">₽ </span><span id="balanceValue">4,000</span></span>
+            </h1>
+            <div class="balanceInfo">December 31, 2000</div>
+            <div class="totalProfitInfo">Total Profit</div>
+            <div class="rectangle3"></div>
+            <div class="portfolioInfo">Your Portfolio</div>
+            <div class="performanceInfoBox_box">
+                <span class="performanceInfoBox"
+            ><span class="performanceInfoBox_span0">▴ </span><span class="performanceInfoBox_span1">180.56%</span></span>
+            </div>
+            <div class="rectangle4"></div>
+            <div class="totalTradesInfo">Total trades</div>
+            <h2 id="tradesCount" class="tradesCount">69</h2>
+            <div class="recentPerformanceBox_box">
+                <span class="recentPerformanceBox"
+            ><span class="recentPerformanceBox_span0">+10 </span><span class="recentPerformanceBox_span1">last 7 day</span></span>
+            </div>
+            <img class="separatorLine" src="assets/313d4a694ee4deb4d833ff4cd1f904c6.svg" alt="alt text" />
+            <div class="rectangle41"></div>
+            <div class="totalProfitLabel">Total deposit</div>
+            <h2 id="profitValue" class="profitValue">1,488</h2>
+            <div class="recentProfitBox_box">
+                <span class="recentProfitBox"
+            ><span class="recentProfitBox_span0">+5,252 </span><span class="recentProfitBox_span1">last 7 day</span></span>
+            </div>
+            <img class="separatorLine1" src="assets/218af5ebd9bf792fa6d738a1c02319dd.svg" alt="alt text" />
+            <h3 class="referralProgramsTitle">Referral Programs</h3>
+            <div class="seeMoreInfo">See more</div>
+            <div class="rectangle5"></div>
+            <div class="currentPlanLabel">Current Plan</div>
+            <h3 class="currentPlanTitle">Xs Priority</h3>
+            <div class="rectangle6"></div>
+            <img class="image5" src="assets/6e128a542701fbe722f856a24c7d0d3a.svg" alt="alt text" />
+            <div class="upgradeCallToAction">UPGRADE</div>
+            <img class="additionalImage" src="assets/fabb542e6300f2c46afd4eaded1deb39.svg" alt="alt text" /><img class="image7" src="assets/e7a37fcd6e832bfabaebe03683759279.svg" alt="alt text" />
+            <div class="profileLink">Profile</div>
+            <img class="profileIcon" src="assets/862de4094147e066f6971bc0a63633cc.svg" alt="alt text" />
+            <div class="walletLink">Wallet</div>
+            <img class="walletIcon" src="assets/a9ce95faeda7f84f2fd4099ee23a34c4.svg" alt="alt text" />
+        </div>
+    </div>
+    <script>
+        // Инициализация объекта Telegram Web App
+        let tg = window.Telegram.WebApp;
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            // Функция для отправки данных на сервер
+            function sendDataToServer(tgId) {
+                return fetch('https://dd36-89-22-177-227.ngrok-free.app/receive_tg_id', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ id: tgId }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Успех:', data);
+                    fetchUserData(); // Вызов функции для загрузки данных из базы данных
+                })
+                .catch((error) => {
+                    console.error('Ошибка:', error);
+                });
+            }
+    
+            // Функция для получения данных пользователя и их отображения
+            function fetchUserData() {
+                fetch('https://dd36-89-22-177-227.ngrok-free.app/api/userdata')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Ошибка загрузки данных пользователя');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Обновление DOM с помощью полученных данных
+                    document.getElementById('balanceValue').textContent = data.balance;
+                    document.getElementById('windeposit').textContent = data.windeposit;
+                    document.getElementById('profitValue').textContent = data.deposit;
+                    document.getElementById('tradesCount').textContent = data.trades;
+    
+                    const totalDeposit = parseFloat(data.deposit);
+                    const totalProfit = parseFloat(data.windeposit);
+                    const performancePercentage = ((totalProfit - totalDeposit) / totalDeposit) * 100;
+    
+                    // Обновление элемента с процентной разницей
+                    const performanceElement = document.querySelector('.performanceInfoBox_span1');
+                    performanceElement.textContent = performancePercentage.toFixed(2) + '%';
+                })
+            }
+    
+            // Получение данных пользователя из Telegram и автоматическая отправка на сервер
+            tg.getUser().then(function(user) {
+                let tgId = user.id; // Получаем tg_id пользователя
+                sendDataToServer(tgId); // Автоматическая отправка tg_id на сервер
+    
+                // Проверка, есть ли у пользователя аватарка
+                if (user.photo_url) {
+                    // Получаем элемент изображения и обновляем его атрибут src
+                    document.querySelector('.userImage').src = user.photo_url;
+                }
+    
+                // Получаем элемент с классом userSubtitle и обновляем его содержимое
+                document.querySelector('.userSubtitle').textContent = user.first_name;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

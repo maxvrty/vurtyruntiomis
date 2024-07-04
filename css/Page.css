@@ -1,0 +1,490 @@
+.page.portfolioSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f8fb;
+  overflow: hidden;
+}
+.page .content_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 0px;
+  width: 320px;
+  height: 548px;
+  min-height: 548px;
+}
+.page .rectangle {
+  position: absolute;
+  top: 500px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 320px;
+  height: 50px;
+  background-color: white;
+  outline: 1px solid #d8d8d8;
+}
+.page .userSubtitle {
+  position: absolute;
+  top: 16px;
+  right: 209px;
+  bottom: 504px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  width: 91px;
+  height: 28px;
+  font: 500 20px/1.39 "Rubik", Helvetica, Arial, serif;
+  color: black;
+}
+.page .greeting {
+  position: absolute;
+  top: 0px;
+  right: 259px;
+  bottom: 527px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  width: 41px;
+  height: 21px;
+  font: 500 15px/1.39 "Rubik", Helvetica, Arial, serif;
+  color: dimgray;
+}
+.page .userImage {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  bottom: 508px;
+  left: 260px;
+  width: 40px;
+  height: 40px;
+}
+.page .rectangle1 {
+  position: absolute;
+  top: 70px;
+  right: 15px;
+  bottom: 358px;
+  left: 15px;
+  width: 290px;
+  height: 120px;
+  background-color: #1e1e1e;
+  border-radius: 30px 30px 30px 30px;
+}
+.page .rectangle2 {
+  position: absolute;
+  top: 70px;
+  right: 15px;
+  bottom: 438px;
+  left: 15px;
+  width: 290px;
+  height: 40px;
+  background-color: #1adb5c;
+  border-radius: 20px 20px 20px 20px;
+}
+.page .balanceTitle_box {
+  position: absolute;
+  top: 133px;
+  right: 169px;
+  bottom: 371px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 44px;
+}
+.page .balanceTitle {
+  font: 200 32px/1.39 "Sora", Helvetica, Arial, serif;
+  color: #000000;
+}
+.page #userBalance {
+  font: 200 1em/1.39 "Sora", Helvetica, Arial, serif;
+  color: #a1a1a1;
+}
+.page #balanceValue {
+  font: 200 1em/1.39 "Sora", Helvetica, Arial, serif;
+  color: white;
+}
+.page .balanceInfo {
+  position: absolute;
+  top: 83px;
+  right: 30px;
+  bottom: 451px;
+  left: 206px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 84px;
+  height: 14px;
+  font: 500 10px/1.39 "Sunflower", Helvetica, Arial, serif;
+  color: dimgray;
+  text-align: right;
+}
+.page .totalProfitInfo {
+  position: absolute;
+  top: 118px;
+  right: 235px;
+  bottom: 416px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  width: 55px;
+  height: 14px;
+  font: 300 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: #a1a1a1;
+}
+.page .rectangle3 {
+  position: absolute;
+  top: 80px;
+  right: 210px;
+  bottom: 448px;
+  left: 30px;
+  width: 80px;
+  height: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px 10px 10px 10px;
+}
+.page .portfolioInfo {
+  position: absolute;
+  top: 83px;
+  right: 218px;
+  bottom: 451px;
+  left: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 14px;
+  font: 400 10px/1.39 "Rubik", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+.page .performanceInfoBox_box {
+  position: absolute;
+  top: 140px;
+  left: 222px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 62px;
+  height: 16px;
+}
+.page .performanceInfoBox {
+  font: 100 11px/1.39 "Sora", Helvetica, Arial, serif;
+  color: #1adb5c;
+  text-align: right;
+}
+.page .performanceInfoBox_span0 {
+  font: 100 1em/1.39 "Sora", Helvetica, Arial, serif;
+}
+.page .performanceInfoBox_span1 {
+  font: 300 1em/1.39 "Sora", Helvetica, Arial, serif;
+}
+.page .rectangle4 {
+  position: absolute;
+  top: 215px;
+  right: 165px;
+  bottom: 233px;
+  left: 15px;
+  width: 140px;
+  height: 100px;
+  background-color: white;
+  border-radius: 30px 30px 30px 30px;
+  outline: 1px solid #d8d8d8;
+  outline-offset: -1px;
+}
+.page .totalTradesInfo {
+  position: absolute;
+  top: 230px;
+  right: 229px;
+  bottom: 304px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  width: 61px;
+  height: 14px;
+  font: 600 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: dimgray;
+}
+.page .tradesCount {
+  position: absolute;
+  top: 248px;
+  right: 219px;
+  bottom: 266px;
+  left: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 34px;
+  font: 400 24px/1.39 "Sora", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+}
+.page .recentPerformanceBox_box {
+  position: absolute;
+  top: 290px;
+  right: 219px;
+  bottom: 244px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  width: 71px;
+  height: 14px;
+}
+.page .recentPerformanceBox {
+  font: 600 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: black;
+}
+.page .recentPerformanceBox_span0 {
+  font: 600 1em/1.39 "Sora", Helvetica, Arial, serif;
+}
+.page .recentPerformanceBox_span1 {
+  font: 600 1em/1.39 "Sora", Helvetica, Arial, serif;
+  color: dimgray;
+}
+.page .separatorLine {
+  position: absolute;
+  top: 284px;
+  right: 180px;
+  bottom: 262px;
+  left: 30px;
+  width: calc(100% - 30px - 180px);
+  height: 2px;
+}
+.page .rectangle41 {
+  position: absolute;
+  top: 215px;
+  right: 15px;
+  bottom: 233px;
+  left: 165px;
+  width: 140px;
+  height: 100px;
+  background-color: white;
+  border-radius: 30px 30px 30px 30px;
+  outline: 1px solid #d8d8d8;
+  outline-offset: -1px;
+}
+.page .totalProfitLabel {
+  position: absolute;
+  top: 230px;
+  right: 83px;
+  bottom: 304px;
+  left: 180px;
+  display: flex;
+  align-items: center;
+  width: 57px;
+  height: 14px;
+  font: 600 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: dimgray;
+}
+.page .profitValue {
+  position: absolute;
+  top: 248px;
+  right: 49.5px;
+  bottom: 266px;
+  left: 198.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 34px;
+  font: 400 24px/1.39 "Sora", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+}
+.page .recentProfitBox_box {
+  position: absolute;
+  top: 290px;
+  right: 53px;
+  bottom: 244px;
+  left: 180px;
+  display: flex;
+  align-items: center;
+  width: 87px;
+  height: 14px;
+}
+.page .recentProfitBox {
+  font: 600 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: black;
+}
+.page .recentProfitBox_span0 {
+  font: 600 1em/1.39 "Sora", Helvetica, Arial, serif;
+}
+.page .recentProfitBox_span1 {
+  font: 600 1em/1.39 "Sora", Helvetica, Arial, serif;
+  color: dimgray;
+}
+.page .separatorLine1 {
+  position: absolute;
+  top: 284px;
+  right: 30px;
+  bottom: 262px;
+  left: 180px;
+  width: calc(100% - 180px - 30px);
+  height: 2px;
+}
+.page .referralProgramsTitle {
+  position: absolute;
+  top: 335px;
+  right: 119px;
+  bottom: 185px;
+  left: 21px;
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 28px;
+  font: 600 20px/1.39 "Rubik", Helvetica, Arial, serif;
+  color: black;
+}
+.page .seeMoreInfo {
+  position: absolute;
+  top: 343px;
+  right: 20px;
+  bottom: 188px;
+  left: 247px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 53px;
+  height: 17px;
+  font: 400 12px/1.39 "Rubik", Helvetica, Arial, serif;
+  color: #454545;
+  text-align: right;
+}
+.page .rectangle5 {
+  position: absolute;
+  top: 370px;
+  right: 15px;
+  bottom: 98px;
+  left: 15px;
+  width: 290px;
+  height: 80px;
+  background-color: white;
+  border-radius: 30px 30px 30px 30px;
+  outline: 1px solid #d8d8d8;
+  outline-offset: -1px;
+}
+.page .currentPlanLabel {
+  position: absolute;
+  top: 384.5px;
+  right: 212px;
+  bottom: 144.5px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  width: 78px;
+  height: 19px;
+  font: 400 13px/1.39 "Varela Round", Helvetica, Arial, serif;
+  color: dimgray;
+}
+.page .currentPlanTitle {
+  position: absolute;
+  top: 403px;
+  right: 184px;
+  bottom: 117px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  width: 106px;
+  height: 28px;
+  font: 600 20px/1.39 "Sora", Helvetica, Arial, serif;
+  color: black;
+}
+.page .rectangle6 {
+  position: absolute;
+  top: 397px;
+  right: 31px;
+  bottom: 126px;
+  left: 201px;
+  width: 88px;
+  height: 25px;
+  background-color: #1b1b1b;
+  border-radius: 12.5px 12.5px 12.5px 12.5px;
+  outline: 6px solid #1b1b1b;
+  outline-offset: -3px;
+}
+.page .image5 {
+  position: absolute;
+  top: 397px;
+  right: 31px;
+  bottom: 126px;
+  left: 264px;
+  width: 25px;
+  height: 25px;
+}
+.page .upgradeCallToAction {
+  position: absolute;
+  top: 403px;
+  right: 61px;
+  bottom: 131px;
+  left: 207px;
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 14px;
+  font: 600 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: #f4f8fb;
+}
+.page .additionalImage {
+  position: absolute;
+  top: 480px;
+  right: 135px;
+  bottom: 25px;
+  left: 135px;
+  width: 50px;
+  height: 50px;
+}
+.page .image7 {
+  position: absolute;
+  top: 497px;
+  right: 149px;
+  bottom: 42px;
+  left: 149px;
+  width: 22px;
+  height: 16px;
+}
+.page .profileLink {
+  position: absolute;
+  top: 529px;
+  right: 238px;
+  bottom: 5px;
+  left: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 14px;
+  font: 600 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: dimgray;
+  text-align: center;
+}
+.page .profileIcon {
+  position: absolute;
+  top: 503px;
+  right: 240px;
+  bottom: 15px;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+}
+.page .walletLink {
+  position: absolute;
+  right: 48.5px;
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 14px;
+  font: 600 10px/1.39 "Sora", Helvetica, Arial, serif;
+  color: dimgray;
+  text-align: center;
+}
+.page .walletIcon {
+  position: absolute;
+  right: 50px;
+  bottom: 15px;
+  width: 30px;
+  height: 30px;
+}
